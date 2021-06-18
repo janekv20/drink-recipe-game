@@ -8,50 +8,73 @@
     <title>Really Fun Restaurant Game</title>
 </head>
 <body>
-    <header>
-        <h1>Really Fun Restaurant Game</h1>
-        <div class="welcome">
-            <p>Welcome to the game. This game uses Yelp to randomly select restaurants. You gain points based on the average Yelp rating. See how high you can get!</p>
+    <div style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
+        <div class="container.is-widescreen has-text-centered">
+            <div class="notification is-primary">
+                <header>
+                    <h1 class="header" style="font-size: 40px;"><strong>Really Fun Restaurant Game</strong></h1>
+                    <div class="welcome">
+                        <p>Welcome to the game. This game uses Yelp to randomly select restaurants; you gain points based on the average Yelp rating. See how high you can get!</p>
+                    </div>
+                </header> 
+            </div>
         </div>
-    </header> 
-    
-    <!-- maybe this should be a modal? -->
-    <div class="field">
-        <form>
-            <p>Please input your favorite food and your current location</p>
-            <label class="label">Fav. food</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Your Favorite Food"></input>
-            </div>  
-            <label class="label">Current location</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="Your Current Location"/>
-            </div>  
-            <button type="submit" class="button is-primary">GO!</button>
-        </form>
-    </div>      
-
-    <div>
-        <div>
-            <h2>RESULTS</h2>
-                <div>
-                    <h3>Randomized Restaurant Results</h2>
-                    <h4>Click here to see all the results in Google Maps
-                        <button class="button is-small">BAM</button>
-                    </h4>
+        <!-- maybe this should be a modal? -->
+        <form class="box" style="text-align: center">
+            <div class="field">
+                <p>Please input your favorite food and your current location</p>
+                <div class="columns">
+                    <div class="column is-half">
+                        <label class="label">Fav. food:</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Your Favorite Food"></input>
+                        </div> 
+                    </div> 
+                    <div class="column is-half">
+                        <label class="label">Current location:</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Your Current Location"/>
+                        </div>  
+                    </div>
                 </div>
-                <div>
-                    <h3>Total Points by Average Yelp stars for all of your restaurant results:</h3>
+                <button type="submit" class="button is-danger is-hovered">GO!</button>  
+            </div>
+        </form>
+            <div class="hero is-primary">
+                <div class="hero-body has-text-centered">
+                    <p class="title" style="text-decoration: underline;">RESULTS</p>
                 </div>  
-            
+            </div>
+            <section class="hero is-info">
+                <div class="hero-body has-text-centered">
+                    
+                    <p class="subtitle">
+                    Click here to see all the <strong>Randomized Restaurant Results</strong> in Google Maps
+                        <button class="button is-warning is-hover">BAM</button>
+                    </p>
+                </div>
+                <section class="hero is-info">
+                    <div class="hero-body">
+                        <p class="title" style="text-align: center">
+                            Total Points by Average Yelp stars for all of your restaurant results:
+                        </p>
+                        <p class="score" style="text-align: center;">SCORE NICE AND BIG HERE!</p>
+                        <button class="button is-success is-hover is-pulled-right">SAVE SCORE - links to High Scores page</button>
+                    </div>
+                    <div>
+                        
+                    </div>   
+            </section>
         </div>
     </div>
 
     <!-- footer -->
-    <footer>
-        <h2>Made by Group 8</h2>
-        <div>
-            
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Made by Group 8:</strong>
+                <h2>all creators listed, names are links to github pages</h2>
+            </p>
         </div>
     </footer>
     <script src="script.js"></script>     

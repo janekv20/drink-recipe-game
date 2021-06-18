@@ -4,10 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"/>    
     <title>Really Fun Restaurant Game</title>
 </head>
 <body>
-    <h1>Really Fun Restaurant Game</h1>
+    <header>
+        <h1>Really Fun Restaurant Game</h1>
+        <div class="welcome">
+            <p>Welcome to the game. This game uses Yelp to randomly select restaurants. You gain points based on the average Yelp rating. See how high you can get!</p>
+        </div>
+    </header> 
     
+    <!-- maybe this should be a modal? -->
+    <div class="field">
+        <form>
+            <p>Please input your favorite food and your current location</p>
+            <label class="label">Fav. food</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Your Favorite Food"></input>
+            </div>  
+            <label class="label">Current location</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Your Current Location"/>
+            </div>  
+            <button type="submit" class="button is-primary">GO!</button>
+        </form>
+    </div>      
+
+    <div>
+        <div>
+            <h2>RESULTS</h2>
+                <div>
+                    <h3>Randomized Restaurant Results</h2>
+                    <h4>Click here to see all the results in Google Maps
+                        <button class="button is-small">BAM</button>
+                    </h4>
+                </div>
+                <div>
+                    <h3>Total Points by Average Yelp stars for all of your restaurant results:</h3>
+                </div>  
+            
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <h2>Made by Group 8</h2>
+        <div>
+            
+        </div>
+    </footer>
+    <script src="script.js"></script>     
 </body>
 </html>

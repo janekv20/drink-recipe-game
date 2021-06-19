@@ -14,49 +14,105 @@
                 <header>
                     <h1 class="header" style="font-size: 40px;"><strong>REALLY Fun Restaurant Game</strong></h1>
                     <div class="welcome">
-                        <p>Welcome to the game. This game uses Yelp to randomly select restaurants; you gain points based on the average Yelp rating. See how high you can get!</p>
+                        <button class="button is-danger" id="welcomeModal">What the heck is happening?!</button>                    
                     </div>
                 </header> 
             </div>
         </div>
-        <!-- maybe this should be a modal? -->
-        <form class="box" style="text-align: center">
-            <div class="field">
-                <p>Please input your favorite food and your current location</p>
-                <div class="columns">
-                    <div class="column is-half">
-                        <label class="label">Fav. food:</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Your Favorite Food"></input>
-                        </div> 
-                    </div> 
-                    <div class="column is-half">
-                        <label class="label">Current location:</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Your Current Location"/>
-                        </div>  
-                    </div>
+
+        <form class="box">
+            <div class="columns">
+                <!-- <p>Please tell us your current location</p> -->
+                <div class="column is-half">
+                    <label class="label">Type current location:</label>
+                    <div class="control">
+                        <input class="input is-info" type="text" placeholder="Your Current Location"/>
+                    </div>  
                 </div>
-                <button type="submit" class="button is-danger is-hovered">GO!</button>  
+                <div class="column is-half">
+                    <h2><strong>Check off your favorite food genre</strong></h2>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Italian
+                        </input>  
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Tex-Mex
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Soup
+                        </input>  
+                    </label>  
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Sandwiches
+                        </input>  
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Salads
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Thai
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Indian
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Vegetarian
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Vegan
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Sushi
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Seafood
+                        </input>  
+                    </label> 
+                    <label class="checkbox">
+                        <input type="checkbox">
+                            Steak
+                        </input>  
+                    </label>
+                </div> 
             </div>
+            <button type="submit" class="button is-danger is-hovered is-large">GO!</button> 
         </form>
             <div class="hero" style="padding: 2rem">
                 <div class="hero-body has-text-centered">
                     <!-- <p class="title">RESULTS</p> -->
                 </div>  
             </div>
-            <section class="hero is-info">
+            <section class="hero is-info is-small">
                 <div class="hero-body has-text-centered">
                     <p class="subtitle">
                     Click here to see all the <strong>Randomized Restaurant Results</strong> in Google Maps
-                        <button class="button is-warning">BAM</button>
                     </p>
+                    <button class="button is-warning">BAM</button>
                 </div>
                 <section class="hero is-info">
                     <div class="hero-body">
                         <p class="title" style="text-align: center">
                             Total Points by Average Yelp stars for all of your restaurant results:
                         </p>
+                        <!-- make the following p dynamic -->
                         <p class="score" style="text-align: center;">SCORE NICE AND BIG HERE!</p>
                         <button class="button is-success is-hover is-pulled-right">SAVE SCORE - links to High Scores page</button>
                     </div>
@@ -66,6 +122,29 @@
             </section>
         </div>
     </div>
+
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content has-background-white py-5 px-5">
+            <h3 class="title mb-6">Welcome to the Yelp Restaurant Game. It's really fun. This game uses Yelp to randomly select restaurants; you gain points based on the average Yelp rating. See how high you can get!</h3>
+        </div>
+    </div>
+
+    <!-- modal script -->
+    <script>
+        const welcomeModalButton = document.querySelector("#welcomeModal");
+        const modalBg = document.querySelector(".modal-background");
+        const modal = document.querySelector(".modal");
+
+        welcomeModalButton.addEventListener('click', () => {
+            modal.classList.add("is-active");
+        });
+
+        modalBg.addEventListener('click', () => {
+            modal.classList.remove("is-active");
+        })   
+    </script>
 
     <!-- footer -->
     <footer class="footer">

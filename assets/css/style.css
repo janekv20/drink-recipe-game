@@ -1,27 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: burlywood;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-header {
-  color: cornsilk;
-  padding: 20px 35px;
-}
-
-header h1 {
-  text-align: center;
-}
-
-.welcome {
-  border: black 1px;
-}
-
-footer {
-  background-color: darkcyan;
+.button:hover {
+  box-shadow: darkcyan;
 }

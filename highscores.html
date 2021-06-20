@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighScores</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+
+<!-- Were using bulma for our css library and formatting -->
+
+</head>
+<body>
+    <!-- Highscores title and 'back to homescreen' button-->
+    <div class="container-fluid" id="mainbody">
+        <div class="row" id="highrow">
+            <div class="column">
+                <a href="index.html" id="restaurant-game-api" class="button">Back to Restaurant Game</a>
+            </div>
+        </div>
+    </div>
+     <!-- High score image -->
+     <div class="container-fluid">
+        <div clas="row" id="highscore-image">
+            <div class="col-4">
+                <img src="assets/images/highscore.jpg" class="img-responsive width 100%" />
+            </div>
+        </div>
+    </div>
+    <!-- Highscore list and 'play again' & 'clear scores' button -->
+    <div class="highscore center-text">
+        <div class = "highscore-body content is-large">
+            <!-- Ordered list is given here, it should dynamically 
+                update as user visits more restaurants and plays the game -->
+            <ol class="scoresHTML" type="1">
+            </ol>
+        <a class="button" href="index.html" role="button" id="playAgain">Play Again</a>
+            <!-- Might need to play around with the href to get the scores to dynamically display -->
+        <a class="button" href="#" role="button" id="clearScores">Clear Scores</a>
+        </div>
+    </div>
+   
+</body>
+</html>

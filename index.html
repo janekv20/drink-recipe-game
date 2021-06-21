@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"/>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>Really Fun Restaurant Game</title>
 </head>
+
 <body>
     <div style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
         <div class="container.is-widescreen has-text-centered">
@@ -14,142 +18,178 @@
                 <header>
                     <h1 class="header" style="font-size: 40px;"><strong>REALLY Fun Restaurant Game</strong></h1>
                     <div class="welcome">
-                        <h3>Welcome to the Yelp Restaurant Game. It's really fun. This game uses Yelp to randomly select restaurants; you gain points based on the average Yelp rating. See how high you can get!</h3>
+                        <h3>Welcome to the Yelp Restaurant Game. It's really fun. This game uses Yelp to randomly select
+                            restaurants; you gain points based on the average Yelp rating. See how high you can get!
+                        </h3>
                     </div>
-                </header> 
+                </header>
             </div>
         </div>
         <div class="columns is-centered" style="margin-top: 10px;">
-            <div class="box has-text-centered">
-                <button class="button is-danger is-large">Play Game!</button>  
-            </div>
-        </div>            
+            <div class="btn-group">
+                <button type="button" class="open-modal" data-open="modal1">Play Game!</button>
+                <div class="modal" id="modal1">
+                    <div class="modal-dialog">
+                        <header class="modal-header">
+                            Type in Your Location and the Food Genre You're Craving
+                            <button class="close-modal" aria-label="close modal" data-close>✕</button>
+                        </header>
+                        <section class="modal-content">
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <label class="label">Type current location:</label>
+                                    <div class="control">
+                                        <input class="input is-info" type="text" placeholder="Your Current Location" />
+                                    </div>
+                                </div>
+                                <div class="column is-half">
+                                    <h2><strong>Check off your favorite food genre</strong></h2>
 
-        <!-- modal -->
-        <div class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content has-background-white py-5 px-5">
-                <div class="columns">
-                    <div class="column is-half">
-                        <label class="label">Type current location:</label>
-                        <div class="control">
-                            <input class="input is-info" type="text" placeholder="Your Current Location"/>
-                        </div> 
+                                </div>
+                                <button type="submit" class="button is-danger is-hovered is-large">GO!</button>
+                            </div>
                     </div>
-                    <div class="column is-half">
-                        <h2><strong>Check off your favorite food genre</strong></h2>
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Italian
-                            </input> 
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Tex-Mex
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Soup
-                            </input>  
-                        </label>  
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Sandwiches
-                            </input>  
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Salads
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Thai
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Indian
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Vegetarian
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Vegan
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Sushi
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Seafood
-                            </input>  
-                        </label> 
-                        <label class="checkbox">
-                            <input type="checkbox">
-                                Steak
-                            </input>  
-                        </label>
-                    </div> 
+                    </section>
+                    <footer class="modal-footer">...</footer>
                 </div>
-                <button type="submit" class="button is-danger is-hovered is-large">GO!</button> 
             </div>
         </div>
-
-        <section class="hero is-info is-small" style="border: white">
-            <div class="hero-body has-text-centered">
-                <p class="subtitle">
-                Click here to see all the <strong>Randomized Restaurant Results</strong> in Google Maps
-                </p>
-                <button class="button is-warning">BAM</button>
-            </div>
-        </section>
-        <section class="hero is-info">
-            <div class="hero-body">
-                <p class="title" style="text-align: center">
-                    Total Points by Average Yelp stars for all of your restaurant results:
-                </p>
-                <!-- make the following p dynamic -->
-                <p class="score" style="text-align: center;">SCORE NICE AND BIG HERE!</p>
-                <button class="button is-success is-hover is-pulled-right">SAVE SCORE - links to High Scores page</button>
-            </div>     
-        </section>
-
-        <!-- footer -->
-        <footer class="footer" style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
-            <div class="content has-text-centered">
-                <div class="columns is-centered">
-                    <div class="box">
-                        <h2><strong>Made by Group 8:</strong></h2>
-                        <h2>all creators listed, names are links to github pages</h2>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-one-quarter">
-                        <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek Phelps</button></a>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <a href="https://github.com/dpbam" target="_blank"><button class="button is-link is-medium">Derek Phelps</button></a>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <a href="https://github.com/dpbam" target="_blank"><button class="button is-warning is-medium">Derek Phelps</button></a>
-                    </div>
-                    <div class="column is-one-quarter">
-                        <a href="https://github.com/dpbam" target="_blank"><button class="button is-danger is-medium">Derek Phelps</button></a>
-                    </div>
-                </div>
-                
-            </div>
-        </footer>
     </div>
-    <script src="script.js"></script>     
+
+
+    <!-- <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content has-background-white py-5 px-5">
+        <div class="columns">
+            <div class="column is-half">
+                <label class="label">Type current location:</label>
+                <div class="control">
+                    <input class="input is-info" type="text" placeholder="Your Current Location"/>
+                </div> 
+            </div>
+            <div class="column is-half">
+                <h2><strong>Check off your favorite food genre</strong></h2>
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Italian
+                    </input> 
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Tex-Mex
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Soup
+                    </input>  
+                </label>  
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Sandwiches
+                    </input>  
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Salads
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Thai
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Indian
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Vegetarian
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Vegan
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Sushi
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Seafood
+                    </input>  
+                </label> 
+                <label class="checkbox">
+                    <input type="checkbox">
+                        Steak
+                    </input>  
+                </label>
+            </div> 
+        </div>
+        <button type="submit" class="button is-danger is-hovered is-large">GO!</button> 
+    </div>
+</div> -->
+
+    <section class="hero is-info is-small" style="border: white">
+        <div class="hero-body has-text-centered">
+            <p class="subtitle">
+                Click here to see all the <strong>Randomized Restaurant Results</strong> in Google Maps
+            </p>
+            <button class="button is-warning">BAM</button>
+        </div>
+    </section>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <p class="title" style="text-align: center">
+                Total Points by Average Yelp stars for all of your restaurant results:
+            </p>
+
+
+            <p class="score" style="text-align: center;">SCORE NICE AND BIG HERE!</p>
+            <a href="highscores.html"><button class="button is-success is-hover is-pulled-right">SAVE SCORE</button></a>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer"
+        style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
+        <div class="content has-text-centered">
+            <div class="columns is-centered">
+                <div class="box">
+                    <h2><strong>Made by Group 8:</strong></h2>
+                    <h2>all creators listed, names are links to github pages</h2>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek
+                            Phelps</button></a>
+                </div>
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/IvanPerezRWS" target="_blank"><button
+                            class="button is-link is-medium">Ivan Perez</button></a>
+                </div>
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/darkholyphoenix" target="_blank"><button
+                            class="button is-warning is-medium">James Bowen</button></a>
+                </div>
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/janekv20" target="_blank"><button
+                            class="button is-danger is-medium">Jane Vo</button></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    </div>
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/result.js"></script>
+    <script src="./assets/js/highscores.js"></script>
 </body>
+
 </html>

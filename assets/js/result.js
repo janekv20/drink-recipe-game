@@ -6,7 +6,7 @@ var term = "";
 
 
 //Set up API key
-var APIKey = "hidden";
+const api_key = "hidden";
 
 // create AJAX call
 function displayRestaurants() {
@@ -14,7 +14,7 @@ function displayRestaurants() {
     $.ajax({
         url: queryURL,
         headers: {
-            'Authorization': 'Bearer API-Key'
+            'Authorization': 'Bearer api_key'
         },
         method: "GET",
         dataType: 'json',

@@ -1,5 +1,5 @@
 
-/*const openEls = document.querySelectorAll("[data-open]");
+const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
 
@@ -28,7 +28,7 @@ document.addEventListener("keyup", e => {
         document.querySelector(".modal.is-visible [data-close]").click();
     }
 });
-*/
+
 //Declare a variable
 var lat = null;
 var long = null;

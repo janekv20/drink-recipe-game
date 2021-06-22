@@ -29,12 +29,23 @@ document.addEventListener("keyup", e => {
     }
 });
 
+<<<<<<< HEAD
 //Declare a variable
 var lat = null;
 var long = null;
 var zipCode = "";
 var term = "";
+=======
+
+var foodInput = document.querySelector(".food");
+var locationInput = document.querySelector(".location");
+var foodInputEl = foodInput.value;
+var locationInputEl = locationInput.value; 
+
+>>>>>>> 5ba3263cb706230931aba4f4062f62126e9ad09d
 require('dotenv').config();
+
+
 
 console.log(process.env);
 
@@ -43,7 +54,9 @@ const api_key = process.env.API_KEY;
 
 // create AJAX call
 function displayRestaurants() {
-    var queryURL = "https://api.yelp.com/v3/businesses/search?" + term + "&=location=" + zipCode
+
+    var queryURL = "https://api.yelp.com/v3/businesses/search?" + foodInputEl + "=&location=" + locationInputEl
+
     $.ajax({
         url: queryURL,
         headers: {
@@ -67,5 +80,6 @@ function displayRestaurants() {
             });
         }
     }
-    )
-};
+
+    )}
+

@@ -34,12 +34,15 @@ var lat = null;
 var long = null;
 var zipCode = "";
 var term = "";
-require('dotenv').config();
+require('dotenv/config')
 
-console.log(process.env);
+const db = require('db')
+db.connect({
+    key: process.env.API_KEY
+})
 
 //Set up API key
-const API_KEY = "hidden";
+
 
 // create AJAX call
 function displayRestaurants() {

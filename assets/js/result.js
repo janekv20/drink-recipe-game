@@ -1,4 +1,5 @@
-const openEls = document.querySelectorAll("[data-open]");
+
+/*const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
 
@@ -13,7 +14,7 @@ for (const el of closeEls) {
     el.addEventListener("click", function () {
         this.parentElement.parentElement.parentElement.classList.remove(isVisible);
     });
-}
+};
 
 document.addEventListener("click", e => {
     if (e.target == document.querySelector(".modal.is-visible")) {
@@ -28,6 +29,7 @@ document.addEventListener("keyup", e => {
     }
 });
 
+
 var foodInput = document.querySelector(".food");
 var locationInput = document.querySelector(".location");
 var foodInputEl = foodInput.value;
@@ -36,18 +38,21 @@ var locationInputEl = locationInput.value;
 require('dotenv').config();
 
 
+
 console.log(process.env);
 
 //Set up API key
-const api_key = "hidden";
+const api_key = process.env.API_KEY;
 
 // create AJAX call
 function displayRestaurants() {
+
     var queryURL = "https://api.yelp.com/v3/businesses/search?" + foodInputEl + "=&location=" + locationInputEl
+
     $.ajax({
         url: queryURL,
         headers: {
-            'Authorization': 'Bearer api_key'
+            'Authorization': 'Bearer ' + api_key
         },
         method: "GET",
         dataType: 'json',
@@ -67,4 +72,6 @@ function displayRestaurants() {
             });
         }
     }
+
     )}
+

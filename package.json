@@ -1,0 +1,8 @@
+{
+    "name": "restaurant-game-api",
+    "description": "This is a version of 'restaurant-game-api' app by Group 8",
+    "version": "1.0.0",
+    "dependencies": {
+        "dotenv": "^10.0.0"
+    }
+}

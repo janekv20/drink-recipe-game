@@ -1,3 +1,36 @@
+const openEls = document.querySelectorAll("[data-open]");
+const closeEls = document.querySelectorAll("[data-close]");
+const isVisible = "is-visible";
+
+for (const el of openEls) {
+    el.addEventListener("click", function () {
+        const modalId = this.dataset.open;
+        document.getElementById(modalId).classList.add(isVisible);
+    });
+}
+
+for (const el of closeEls) {
+    el.addEventListener("click", function () {
+        this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+    });
+}
+
+document.addEventListener("click", e => {
+    if (e.target == document.querySelector(".modal.is-visible")) {
+        document.querySelector(".modal.is-visible [data-close]").click();
+    }
+});
+
+document.addEventListener("keyup", e => {
+    // if we press the ESC
+    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+        document.querySelector(".modal.is-visible [data-close]").click();
+    }
+});
+
+
+require('dotenv').config();
+
 //Declare a variable
 var lat = null;
 var long = null;
@@ -5,8 +38,10 @@ var zipCode = "";
 var term = "";
 
 
+console.log(process.env);
+
 //Set up API key
-var APIKey = "hidden";
+const api_key = "hidden";
 
 // create AJAX call
 function displayRestaurants() {
@@ -14,7 +49,7 @@ function displayRestaurants() {
     $.ajax({
         url: queryURL,
         headers: {
-            'Authorization': 'Bearer API-Key'
+            'Authorization': 'Bearer api_key'
         },
         method: "GET",
         dataType: 'json',

@@ -34,15 +34,12 @@ var lat = null;
 var long = null;
 var zipCode = "";
 var term = "";
-require('dotenv/config')
+require('dotenv').config();
 
-const db = require('db')
-db.connect({
-    key: process.env.API_KEY
-})
+console.log(process.env);
 
 //Set up API key
-
+const api_key = process.env.API_KEY;
 
 // create AJAX call
 function displayRestaurants() {
@@ -50,7 +47,7 @@ function displayRestaurants() {
     $.ajax({
         url: queryURL,
         headers: {
-            'Authorization': 'Bearer API_KEY'
+            'Authorization': 'Bearer ' + api_key
         },
         method: "GET",
         dataType: 'json',

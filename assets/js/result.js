@@ -1,5 +1,5 @@
 
-/*const openEls = document.querySelectorAll("[data-open]");
+const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
 
@@ -28,21 +28,18 @@ document.addEventListener("keyup", e => {
         document.querySelector(".modal.is-visible [data-close]").click();
     }
 });
-
+// when we press Go button
+document.addEventListener("click", e => {
+    if (e.key == "Go" && document.querySelector('#goSearch')) {
+    }
+});
 
 var foodInput = document.querySelector(".food");
 var locationInput = document.querySelector(".location");
 var foodInputEl = foodInput.value;
-var locationInputEl = locationInput.value; 
+var locationInputEl = locationInput.value;
 
-require('dotenv').config();
-
-
-
-console.log(process.env);
-
-//Set up API key
-const api_key = process.env.API_KEY;
+const api_key = 'bX-trm4auNudxiiAeCbSA6jNygnErRfxAHTFg6uFaE_muyIDm9VDO6s4cZyx7M-2N7prlSry13TwEvrwzpq3OkO83KVAdcLXRMquZZ8zXK7WxyrgKHs-sk0RIjnRYHYx';
 
 // create AJAX call
 function displayRestaurants() {
@@ -73,5 +70,6 @@ function displayRestaurants() {
         }
     }
 
-    )}
+    )
+}
 

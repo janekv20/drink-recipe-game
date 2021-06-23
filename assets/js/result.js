@@ -81,3 +81,52 @@ function displayRestaurants(data) {
         cost;
     });
 }
+var queryURL =
+  "https://api.yelp.com/v3/businesses/search?" +
+  foodInputEl +
+  "=&location=" +
+  locationInputEl;
+
+fetch(queryURL)
+  .then(function (response) {
+    // request was successful
+    if (response.ok) {
+      //  console.log(response);
+      return response.json();
+    } else {
+      alert("Error: " + response.statusText);
+    }
+  })
+  .then((data) => {
+    var restaurantName = item.name;
+    var foodGenre = item.categories;
+    var yelpRating = item.rating;
+    var restaurantLoc = item.location;
+    var cost = item.price;
+    //Append results onto homepage
+    resultsDisplay.extContent =
+      "Restaurant: <b>" +
+      restaurantName +
+      "<b><br> Food Genre: " +
+      foodGenre +
+      "<br>Rating: " +
+      yelpRating +
+      "<br>Location: " +
+      restaurantLoc +
+      "<br>Price: " +
+      cost;
+  });
+
+var getLocation = function (data) {
+  var apiURL = fetch(apiURL)
+    .then(function (response) {
+      // request was successful
+      if (response.ok) {
+        //  console.log(response);
+        return response.json();
+      } else {
+        alert("Error: " + response.statusText);
+      }
+    })
+    .then((data) => {});
+};

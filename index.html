@@ -28,32 +28,33 @@
         </div>
         <div class="columns is-centered" style="margin-top: 10px;">
             <div class="btn-group">
-                <button type="button" class="open-modal button is-danger" style="margin-bottom: 1.3rem;" data-open="modal1">Play Game!</button>
+                <button type="button" class="open-modal button is-large is-danger" style="margin-bottom: 1.3rem;" data-open="modal1">Play Game!</button>
                 <div class="modal" id="modal1">
-                    <div class="modal-dialog is-clipped">
-                        <header class="modal-header">
-                            Type in Your Location and the Food Genre You're Craving
+                    <div class="modal-dialog modal-background">
+                        <header class="modal-card-head is-link">
+                            Tell Us Your Location and the Food You're Craving
                             <button class="close-modal" aria-label="close modal" data-close>✕</button>
                         </header>
                         <section class="modal-content">
                             <div class="columns">
-                                <div class="column is-half">
+                                <div class="column is-two-fifths">
                                     <label class="label">Type current location:</label>
                                     <div class="control">
                                         <input class="location input is-info" type="text"
                                             placeholder="Your Current Location" />
                                     </div>
                                 </div>
-                                <div class="column is-half">
+                                <div class="column is-two-fifths">
                                     <label class="label">Type your favorite food:</label>
                                     <div class="control">
-                                        <input class="food input is-info" type="text" placeholder="Food Genre" />
+                                        <input class="food input is-info" type="text" placeholder="Pizza, Tacos, Mutton" />
                                     </div>
                                 </div>
-                                <button class="button is-danger is-hovered is-large" id="goSearch">GO!</button>
+                                <button class="button is-danger is-hovered is-large" style="margin-top: 2rem; margin-left: 1rem;" id="goSearch">GO!</button>
                             </div>
+                        </section>
                     </div>
-                    </section>
+                    
 
                 </div>
             </div>
@@ -141,7 +142,7 @@
 
     <section class="hero is-info is-small" style="border: white">
         <div class="hero-body has-text-centered">
-            <h2 style="font-size: 50px;">Restaurant Results</h2>
+            <h2 style="font-size: 50px;"><strong>Restaurant Results</strong></h2>
             <div class="results">
 
             </div>

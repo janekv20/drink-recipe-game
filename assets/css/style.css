@@ -48,7 +48,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
   background: var(--black);
   cursor: pointer;
   visibility: hidden;
@@ -75,18 +75,18 @@ button {
   padding: 1rem;
 }
 
-.modal-header,
+/* .modal-header,
 .modal-footer {
   background: var(--lightgray);
-}
+} */
 
-.modal-header {
+.modal-card-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.modal-header .close-modal {
+.modal-card-head .close-modal {
   font-size: 1.5rem;
 }
 

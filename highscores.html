@@ -10,35 +10,50 @@
 <!-- Were using bulma for our css library and formatting -->
 
 </head>
-<body>
-    <!-- Highscores title and 'back to homescreen' button-->
-    <div class="container-fluid" id="mainbody">
-        <div class="row" id="highrow">
-            <div class="column">
-                <a href="index.html" id="restaurant-game-api" class="button">Back to Restaurant Game</a>
+
+    <body>
+    <!-- Foody backround -->
+    <div style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)" class="is-centered">
+        <div class="container is-widescreen has-text-centered">
+
+                <!-- Highscores title and 'back to homescreen' button-->
+                <div class="container-fluid" id="mainbody">
+                    <div class="row" id="highrow">
+                        <div class="column">
+                            <a href="index.html" id="restaurant-game-api">
+                                <button class="button is-hover is-primary is-large">Back to Restaurant Game</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- High score image -->
+                <div class="container-fluid">
+                    <div clas="row" id="highscore-image">
+                        <div class="col-4">
+                            <img src="assets/high-score-banner.png" class="img-responsive width 100%" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Highscore list and 'play again' & 'clear scores' button -->
+                <div class="highscore center-text">
+                    <div class = "highscore-body content is-large">
+                        <!-- Ordered list is given here, it should dynamically 
+                            update as user visits more restaurants and plays the game -->
+                        <ol class="scoresHTML" type="1">
+                        </ol>
+                    <a href="index.html" role="button" id="playAgain">
+                        <button class="button is-hover is-primary is-large">Play Again</button>
+                    </a>
+                                <!-- Might need to play around with the href to get the scores to dynamically display -->
+                    <a href="#" role="button" id="clearScores">
+                        <button class="button is-hover is-primary is-large">Clear Scores</button>
+                    </a>
+                    </div>
+                </div> 
             </div>
         </div>
-    </div>
-     <!-- High score image -->
-     <div class="container-fluid">
-        <div clas="row" id="highscore-image">
-            <div class="col-4">
-                <img src="assets/images/highscore.jpg" class="img-responsive width 100%" />
-            </div>
-        </div>
-    </div>
-    <!-- Highscore list and 'play again' & 'clear scores' button -->
-    <div class="highscore center-text">
-        <div class = "highscore-body content is-large">
-            <!-- Ordered list is given here, it should dynamically 
-                update as user visits more restaurants and plays the game -->
-            <ol class="scoresHTML" type="1">
-            </ol>
-        <a class="button" href="index.html" role="button" id="playAgain">Play Again</a>
-            <!-- Might need to play around with the href to get the scores to dynamically display -->
-        <a class="button" href="#" role="button" id="clearScores">Clear Scores</a>
-        </div>
-    </div>
-   
-</body>
+    </body>
+    <footer class="footer"
+        style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)"></footer>
+
+    <!-- End backround theme -->
 </html>

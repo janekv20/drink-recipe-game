@@ -28,7 +28,11 @@ document.addEventListener("keyup", e => {
         document.querySelector(".modal.is-visible [data-close]").click();
     }
 });
-
+// when we press Go button
+document.addEventListener("click", e => {
+    if (e.key == "Go" && document.querySelector('#goSearch')) {
+    }
+});
 
 var foodInput = document.querySelector(".food");
 var locationInput = document.querySelector(".location");
@@ -36,32 +40,28 @@ var foodInputEl = foodInput.value;
 var locationInputEl = locationInput.value; 
 var resultsDisplay = document.querySelector(".results")
 
-require('dotenv').config();
 
 
+const api_key = 'bX-trm4auNudxiiAeCbSA6jNygnErRfxAHTFg6uFaE_muyIDm9VDO6s4cZyx7M-2N7prlSry13TwEvrwzpq3OkO83KVAdcLXRMquZZ8zXK7WxyrgKHs-sk0RIjnRYHYx';
 
-console.log(process.env);
 
-//Set up API key
-const api_key = process.env.API_KEY;
-
-// create AJAX call
-function displayRestaurants() {
+function displayRestaurants(data) {
 
     var queryURL = "https://api.yelp.com/v3/businesses/search?" + foodInputEl + "=&location=" + locationInputEl
 
-    fetch(queryURL)
-      .then(function(response) {
-        // request was successful
-        if (response.ok) {
-        //  console.log(response);
-           return response.json();
-        } else {
-          alert("Error: " + response.statusText);
-        }
-      })
-        .then((data) => {
-                //Store each restaurant object in a variable
+
+    
+        fetch(queryURL)
+          .then(function(response) {
+            // request was successful
+            if (response.ok) {
+            //  console.log(response);
+               return response.json();
+            } else {
+              alert("Error: " + response.statusText);
+            }
+          })
+            .then((data) => {
                 var restaurantName = item.name;
                 var foodGenre = item.categories;
                 var yelpRating = item.rating;
@@ -72,4 +72,3 @@ function displayRestaurants() {
             });
         }
     
-

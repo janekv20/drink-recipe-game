@@ -72,3 +72,19 @@ function displayRestaurants(data) {
             });
         }
     
+var getLocation = function(data) {
+    var apiURL =
+
+    fetch(apiURL)
+          .then(function(response) {
+            // request was successful
+            if (response.ok) {
+            //  console.log(response);
+               return response.json();
+            } else {
+              alert("Error: " + response.statusText);
+            }
+          })
+            .then((data) => {
+
+})}

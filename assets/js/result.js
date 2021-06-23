@@ -27,6 +27,7 @@ document.addEventListener("keyup", (e) => {
     document.querySelector(".modal.is-visible [data-close]").click();
   }
 });
+
 // when we press Go button
 document.addEventListener("click", (e) => {
   if (e.target == document.querySelector("#goSearch")) {

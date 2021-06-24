@@ -59,37 +59,44 @@
         <div id="cocktail" class="hero-body has-text-centered">
 
         </div>
-        <div id="overlay"></div>
-        <div class="columns is-pulled-right" style="margin-left: auto;">
-            <div class="column">
-                <a href="highscores.html"><button class="button is-danger is-hover">SAVE
-                        SCORE</button></a>
+
+    </section>
+    <section class="hero is-info">
+        <div class="hero-body">
+
+            <p class="title" style="text-align: center">
+                Tired of Making Your Own Drinks? Search for a Brewery In Your City:
+
+            </p>
+            <div class="brewery">
+                <label for="breweryInput">Enter your City: </label>
+                <input id="breweryInput" name="breweryInput" />
+                <button type="submit" class="brewerySubmit">Submit</button>
             </div>
+            <div id="breweryDisplay">
+
+            </div>
+            <a href="userfeedback.html"><button class="button is-success is-hover is-pulled-right">Click Here to Provide
+                    User Feedback</button></a>
         </div>
     </section>
 
-    <section class="hero is-info">
-        <div class="hero-body is-success">
-
-            <p class="title" style="text-align: center">
-                Tired of Making Your Own Drinks? Search for a place to have drinks:
-
-            </p>
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column is-one-quarter">
-                        <div class="brewery">
-                            <label for="breweryInput">Enter your Location</label>
-                            <input id="breweryInput" name="breweryInput" class="input is-warning is-medium" />
-                            <button type=" submit" class="brewerySubmit button is-warning">Submit</button>
-                        </div>
-                        <div class="brewerydisplay"></div>
-                    </div>
+    </p>
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-one-quarter">
+                <div class="brewery">
+                    <label for="breweryInput">Enter your Location</label>
+                    <input id="breweryInput" name="breweryInput" class="input is-warning is-medium" />
+                    <button type=" submit" class="brewerySubmit button is-warning">Submit</button>
                 </div>
+                <div class="brewerydisplay"></div>
             </div>
-
-            <p class="score" style="text-align: center;"></p>
         </div>
+    </div>
+
+    <p class="score" style="text-align: center;"></p>
+    </div>
     </section>
 
     <!-- footer -->
@@ -126,7 +133,7 @@
 
     </div>
     <script src="./assets/js/result.js"></script>
-    <!--  <script src="./assets/js/user-feed.js"></script> -->
+    <script src="./assets/js/feedback.js"></script>
 
 </body>
 

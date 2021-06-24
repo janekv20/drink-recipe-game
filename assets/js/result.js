@@ -1,9 +1,13 @@
 const openEls = document.querySelectorAll("[data-open]");
-var brewerylocation
-var breweryInputEL = document.getElementById("breweryInput").value;
+// var breweryInputEL = document.getElementById("breweryInput").value;
 var locationButton = document.querySelector('.brewerySubmit');
 
 var score = 0;
+const saveScore = window.localStorage.getItem("score");
+if (saveScore) {
+    score = JSON.parse(saveScore);
+}
+
 
 
 for (const el of openEls) {
@@ -80,6 +84,9 @@ function displayCocktail(data) {
         default:
             score += 1;
     }
+    const jsonScore = JSON.stringify(score);
+    window.localStorage.setItem("score", jsonScore);
+
 
     const cocktailInstruction = "<b>Instructions:</b> " + cocktail.strInstructions;
     const instructions = document.createElement("p");
@@ -112,52 +119,57 @@ function displayCocktail(data) {
     const scoreDiv = document.createElement("score");
     scoreDiv.innerHTML = cocktailScore;
     cocktailDiv.appendChild(scoreDiv);
-
-    
-   
 }
 
-
-
-var getBreweries = function(data) {
-    urlAPI = "https://api.openbrewerydb.org/breweries?by_city=" +brewerylocation;
+var getBreweries = function (breweryInputEL) {
+    urlAPI = "https://api.openbrewerydb.org/breweries?by_city=" + breweryInputEL;
 
     fetch(urlAPI)
-      .then(function(response) {
-        // request was successful
-        if (response.ok) {
-         console.log(response);
-           return response.json();
-        } else {
-          alert("Error: " + response.statusText);
-        }
-      }).then((data) => {
-        console.log(data);
-        displayBreweries()
+        .then(function (response) {
+            // request was successful
+            if (response.ok) {
+                console.log(response);
+                return response.json();
+            } else {
+                alert("Error: " + response.statusText);
+            }
+        }).then((data) => {
+            console.log(data);
+            console.log(breweryInputEL);
+            displayBreweries(data);
 
-      })}
-
-var displayBreweries = function(data) {
-    const breweryDiv = document.querySelector(".brewerydisplay");
-    breweryDiv.innerHTML = '';
-
-    const breweryName = data.name;
-    window.breweryPlace = breweryName;
-    const breweryheading = document.createElement("h1");
-    breweryheading.innerHTML = breweryName;
-    breweryDiv.appendChild(breweryheading);
-
-    const breweryAddress = data.street;
-        window.brewerySpot = breweryAddress;
-    const locationHeading = document.createElement("breweryStreet");
-        locationHeading.innerHTML = breweryAddress;
-        breweryDiv.appendChild(locationHeading);
-
+        })
 }
 
-locationButton.addEventListener('click', function(event){
-    console.log(breweryInputEL)
+function displayBreweries(data) {
+
+    // var data = [{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }, { value: 4 }];
+
+    for (var i = 0; i < data.length && i < 5; ++i) {
+
+        const brewery = data[i];
+        const breweryDiv = document.getElementById("breweryDisplay");
+
+        const breweryName = brewery.name;
+        const breweryheading = document.createElement("h1");
+        breweryheading.innerHTML = breweryName;
+        breweryDiv.appendChild(breweryheading);
+
+        var breweryAddress = brewery.street;
+        if (!breweryAddress) {
+            breweryAddress = "No address provided";
+        }
+        const locationList = document.createElement("li");
+        locationList.innerHTML = breweryAddress;
+        breweryDiv.appendChild(locationList);
+    }
+}
+
+locationButton.addEventListener('click', function (event) {
+    console.log("clicked")
     var breweryInputEL = document.getElementById("breweryInput").value;
+    console.log(breweryInputEL)
     window.brewerylocation = breweryInputEL
-    getBreweries();
- });
+    getBreweries(breweryInputEL);
+});
+

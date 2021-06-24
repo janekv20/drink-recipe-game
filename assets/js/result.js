@@ -1,6 +1,14 @@
 const openEls = document.querySelectorAll("[data-open]");
+<<<<<<< HEAD
 var cocktailDrink
 var cocktailScore = 0;
+=======
+var brewerylocation
+var breweryInputEL = document.getElementById("breweryInput").value;
+var locationButton = document.querySelector('.brewerySubmit');
+
+var score = 0;
+>>>>>>> ef494d9930ccc7318635676984e61b1859674e06
 
 
 for (const el of openEls) {
@@ -109,6 +117,7 @@ function displayCocktail(data) {
     const scoreDiv = document.createElement("finalScore");
     scoreDiv.innerHTML = cocktailScore;
     cocktailDiv.appendChild(scoreDiv);
+<<<<<<< HEAD
 }
 
 var postal = "";
@@ -155,3 +164,54 @@ var retrievedScore = localStorage.getItem('cocktailScore');
 
 //     window.localStorage.setItem("highScores", JSON.stringify(highScores));
 // }
+=======
+
+    
+   
+}
+
+
+
+var getBreweries = function(data) {
+    urlAPI = "https://api.openbrewerydb.org/breweries?by_city=" +brewerylocation;
+
+    fetch(urlAPI)
+      .then(function(response) {
+        // request was successful
+        if (response.ok) {
+         console.log(response);
+           return response.json();
+        } else {
+          alert("Error: " + response.statusText);
+        }
+      }).then((data) => {
+        console.log(data);
+        displayBreweries()
+
+      })}
+
+var displayBreweries = function(data) {
+    const breweryDiv = document.querySelector(".brewerydisplay");
+    breweryDiv.innerHTML = '';
+
+    const breweryName = data.name;
+    window.breweryPlace = breweryName;
+    const breweryheading = document.createElement("h1");
+    breweryheading.innerHTML = breweryName;
+    breweryDiv.appendChild(breweryheading);
+
+    const breweryAddress = data.street;
+        window.brewerySpot = breweryAddress;
+    const locationHeading = document.createElement("breweryStreet");
+        locationHeading.innerHTML = breweryAddress;
+        breweryDiv.appendChild(locationHeading);
+
+}
+
+locationButton.addEventListener('click', function(event){
+    console.log(breweryInputEL)
+    var breweryInputEL = document.getElementById("breweryInput").value;
+    window.brewerylocation = breweryInputEL
+    getBreweries();
+ });
+>>>>>>> ef494d9930ccc7318635676984e61b1859674e06

@@ -15,60 +15,36 @@
     <body>
     <!-- Foody backround -->
     <div style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)" class = background-image>
-        <div class="container is-widescreen has-text-centered">
-
-                <!-- High score image -->
-                <div class="container-fluid">
-                    <div clas="row" id="highscore-image">
-                        <div class="col-4 highscore-container">
-                            <img src="assets/high-score-banner.png" class="img-responsive width 100%" />
-                        </div>
-                    </div>
+        <!--<div class="container is-widescreen has-text-centered"> -->
+            <div class="box">
+                <h1 class="title">Thank you for playing our game! We'd love to hear your feedback!</h1>
+            </div>
+            <!--Form input-->
+            <div class="box box-centered">
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Please provide your name">
                 </div>
-                <!-- Highscore list and 'play again' & 'clear scores' button -->
-                <div class="highscore center-text">
+            </div>
+            <div class="field">
+                <label class="label">Feedback</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="We'd love to hear your feedback"></textarea>
+                </div>
+            </div>
+            </div>
 
-                    <!--*********** Add card(s) for highdscore display **********-->
-                        <div class="card highscore-card">
-                            <header class="card-header">
-                                <h2 class="card-header-title">
-                                    Highscores
-                                </h2>
-                            </header>
-                            <div class = "card-content highscore-body content is-large">
-                                <div class="content">
-                                <!-- Ordered list is given here, it should dynamically 
-                                    update as user visits more restaurants and plays the game -->
-                                <ol class="scoresHTML" type="1"> 
-                                
-                                </ol>
-                                <ol class="scoresHTML" type="2"> 
-                                
-                                </ol>
-                                <ol class="scoresHTML" type="3"> 
-                                
-                                </ol>
-                                <ol class="scoresHTML" type="4"> 
-                                
-                                </ol>
-                                <ol class="scoresHTML" type="5"> 
-                                
-                                </ol>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Highscore list and 'play again' & 'clear scores' button -->
+                
                         <div class="bottom-buttons">
                             <a href="index.html" role="button" id="playAgain">
                                 <button class="button is-hover is-primary is-large">Play Again</button>
                             </a>
-                                        <!-- Might need to play around with the href to get the scores to dynamically display -->
-                            <a href="#" role="button" id="clearScores">
-                                <button class="button is-hover is-primary is-large">Clear Scores</button>
-                            </a>
                         </div>
                 </div>
             </div> 
-        </div>
+        <!--</div>-->
     </div>
     </body>
     <footer

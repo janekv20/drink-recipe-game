@@ -134,9 +134,9 @@ color: white;
   padding-top: auto;
   padding-left: auto;
   padding-right: auto;
-  padding-bottom: 150px;
+  padding-bottom: 70px;
   margin: 0px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .bottom-buttons {
@@ -154,4 +154,11 @@ footer {
 
 .highscore-container {
   background-color: rgba(255, 255, 255, 0.418);
+}
+.scoresHTML {
+  color: white;
+}
+
+.box-centered {
+  margin: 10%;
 }

@@ -17,7 +17,9 @@
                 <header>
                     <h1 class="header" style="font-size: 40px;"><strong>Randomly Fun Drink Recipe Game</strong></h1>
                     <div class="welcome">
-                        <h3 style="font-size: 15px;">Welcome to the Randomly Fun Drink Recipe Game. It's really fun. This game enables users to click a single button to randomly receive a drink recipe. Points are assigned. See how high you can get!
+                        <h3 style="font-size: 15px;">Welcome to the Randomly Fun Drink Recipe Game. It's really fun.
+                            This game enables users to click a single button to randomly receive a drink recipe. Points
+                            are assigned. See how high you can get!
                         </h3>
                     </div>
                 </header>
@@ -25,7 +27,8 @@
         </div>
         <div class="columns is-centered" style="margin-top: 10px;">
             <div class="btn-group">
-                <button type="button" class="open-modal button is-large is-danger" style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Play Game!</button>
+                <button type="button" class="open-modal button is-large is-danger"
+                    style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Play Game!</button>
                 <div class="modal" id="modal1">
                     <div class="modal-dialog modal-background">
                         <header class="modal-card-head is-link">
@@ -33,245 +36,76 @@
                             <button class="close-modal" aria-label="close modal" data-close>✕</button>
                         </header>
                         <section class="modal-content">
-<<<<<<< HEAD
-                            <!-- <div class="columns">
-                                <div class="column is-half">
-=======
-                            <div class="columns">
-                                <div class="column is-two-fifths">
->>>>>>> 5f4b6d94c00431440713868017ca1ce7b937c069
-                                    <label class="label">Type current location:</label>
-                                    <div class="control">
-                                        <input class="location input is-info" type="text"
-                                            placeholder="Your Current Location" />
-                                    </div>
-                                </div>
-                                <div class="column is-two-fifths">
-                                    <label class="label">Type your favorite food:</label>
-                                    <div class="control">
-                                        <input class="food input is-info" type="text" placeholder="Pizza, Tacos, Mutton" />
-                                    </div>
-<<<<<<< HEAD
-                                </div> -->
+
                             <button class="button is-danger is-hovered is-large" id="goSearch">GO!</button>
                     </div>
-=======
-                                </div>
-                                <button class="button is-danger is-hovered is-large" style="margin-top: 2rem; margin-left: 1rem;" id="goSearch">GO!</button>
-                            </div>
-                        </section>
-                    </div>
-                    
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="hero is-info is-small" style="border: white">
-        <div class="hero-body has-text-centered">
-            <h2 style="font-size: 30px;"><strong>Cocktail Recipe Results</strong></h2>
-            <div class="results">
-
-            </div>
-            <p>Click here to see your results in...</p>
-            <button class="button is-warning">BAM</button>
-        </div>
-    </section>
-    <section class="hero is-info">
-        <div class="hero-body">
-            <p class="title" style="text-align: center">
-                Total Points:
-            </p>
-
-
-            <p class="score" style="text-align: center;">SCORE NICE AND BIG HERE!</p>
-            <a href="highscores.html"><button class="button is-success is-hover is-pulled-right">SAVE SCORE</button></a>
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="footer"
-        style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)">
-        <div class="content">
-            <div class="columns is-centered">
-                <div class="box">
-                    <h2><strong>Made by Group 8:</strong></h2>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column is-pulled-right">
-                    <a href="https://github.com/dpbam" target="_blank"><button class="button is-danger is-medium">Derek
-                            Phelps</button></a>
-                </div>
-                <div class="column is-pulled-right">
-                    <a href="https://github.com/IvanPerezRWS" target="_blank"><button
-                            class="button is-link is-medium">Ivan Perez</button></a>
-                </div>
-                <div class="column is-pulled-right">
-                    <a href="https://github.com/darkholyphoenix" target="_blank"><button
-                            class="button is-warning is-medium">James Bowen</button></a>
-                </div>
-                <div class="column ">
-                    <a href="https://github.com/janekv20" target="_blank"><button
-                            class="button is-success is-medium">Jane Vo</button></a>
->>>>>>> 5f4b6d94c00431440713868017ca1ce7b937c069
                 </div>
                 </section>
 
             </div>
         </div>
-    </footer>
+        </footer>
 
     </div>
-<<<<<<< HEAD
     </div>
-=======
-    <script src="./assets/js/result.js"></script>
-    <!--  <script src="./assets/js/highscores.js"></script> -->
-
-</body>
->>>>>>> 5f4b6d94c00431440713868017ca1ce7b937c069
 
 </html>
 
-    <!-- <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content has-background-white py-5 px-5">
+<section class="hero is-info is-small" style="border: white">
+    <div id="cocktail" class="hero-body has-text-centered">
+
+    </div>
+    <div id="overlay"></div>
+</section>
+<section class="hero is-info">
+    <div class="hero-body">
+        <p class="title" style="text-align: center">
+            Tired of Making Your Own Drinks? Search for a place to have drinks:
+
+        </p>
+
+
+        <p class="score" style="text-align: center;"></p>
+        <a href="highscores.html"><button class="button is-success is-hover is-pulled-right">SAVE SCORE</button></a>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="footer"
+    style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
+    <div class="content has-text-centered">
+        <div class="columns is-centered">
+            <div class="box">
+                <h2><strong>Made by Group 8:</strong></h2>
+                <h2>all creators listed, names are links to github pages</h2>
+            </div>
+        </div>
         <div class="columns">
-            <div class="column is-half">
-                <label class="label">Type current location:</label>
-                <div class="control">
-                    <input class="input is-info" type="text" placeholder="Your Current Location"/>
-                </div> 
+            <div class="column is-one-quarter">
+                <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek
+                        Phelps</button></a>
             </div>
-            <div class="column is-half">
-                <h2><strong>Check off your favorite food genre</strong></h2>
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Italian
-                    </input> 
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Tex-Mex
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Soup
-                    </input>  
-                </label>  
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Sandwiches
-                    </input>  
-                </label>
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Salads
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Thai
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Indian
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Vegetarian
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Vegan
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Sushi
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Seafood
-                    </input>  
-                </label> 
-                <label class="checkbox">
-                    <input type="checkbox">
-                        Steak
-                    </input>  
-                </label>
-            </div> 
-        </div>
-        <button type="submit" class="button is-danger is-hovered is-large">GO!</button> 
-    </div>
-<<<<<<< HEAD
-</div> -->
-
-    <section class="hero is-info is-small" style="border: white">
-        <div id="cocktail" class="hero-body has-text-centered">
-
-        </div>
-        <div id="overlay"></div>
-    </section>
-    <section class="hero is-info">
-        <div class="hero-body">
-            <p class="title" style="text-align: center">
-                Tired of Making Your Own Drinks? Search for a place to have drinks:
-
-            </p>
-
-
-            <p class="score" style="text-align: center;"></p>
-            <a href="highscores.html"><button class="button is-success is-hover is-pulled-right">SAVE SCORE</button></a>
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="footer"
-        style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
-        <div class="content has-text-centered">
-            <div class="columns is-centered">
-                <div class="box">
-                    <h2><strong>Made by Group 8:</strong></h2>
-                    <h2>all creators listed, names are links to github pages</h2>
-                </div>
+            <div class="column is-one-quarter">
+                <a href="https://github.com/IvanPerezRWS" target="_blank"><button class="button is-link is-medium">Ivan
+                        Perez</button></a>
             </div>
-            <div class="columns">
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek
-                            Phelps</button></a>
-                </div>
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/IvanPerezRWS" target="_blank"><button
-                            class="button is-link is-medium">Ivan Perez</button></a>
-                </div>
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/darkholyphoenix" target="_blank"><button
-                            class="button is-warning is-medium">James Bowen</button></a>
-                </div>
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/janekv20" target="_blank"><button
-                            class="button is-danger is-medium">Jane Vo</button></a>
-                </div>
+            <div class="column is-one-quarter">
+                <a href="https://github.com/darkholyphoenix" target="_blank"><button
+                        class="button is-warning is-medium">James Bowen</button></a>
             </div>
-
+            <div class="column is-one-quarter">
+                <a href="https://github.com/janekv20" target="_blank"><button class="button is-danger is-medium">Jane
+                        Vo</button></a>
+            </div>
         </div>
-    </footer>
 
     </div>
-    <script src="./assets/js/result.js"></script>
-    <!--  <script src="./assets/js/highscores.js"></script> -->
+</footer>
+
+</div>
+<script src="./assets/js/result.js"></script>
+<!--  <script src="./assets/js/highscores.js"></script> -->
 
 </body>
 
 </html>
-=======
-</div> -->
->>>>>>> 5f4b6d94c00431440713868017ca1ce7b937c069

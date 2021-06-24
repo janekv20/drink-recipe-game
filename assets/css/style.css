@@ -134,7 +134,7 @@ color: white;
   padding-top: auto;
   padding-left: auto;
   padding-right: auto;
-  padding-bottom: 25px;
+  padding-bottom: 150px;
   margin: 0px;
   margin-bottom: 100px;
 }
@@ -150,4 +150,8 @@ footer {
   align-items: center;
   font-size: 1.5rem;
   margin-top: 100px;
+}
+
+.highscore-container {
+  background-color: rgba(255, 255, 255, 0.418);
 }

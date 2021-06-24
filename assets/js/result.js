@@ -3,6 +3,11 @@ const openEls = document.querySelectorAll("[data-open]");
 var locationButton = document.querySelector('.brewerySubmit');
 
 var score = 0;
+const saveScore = window.localStorage.getItem("score");
+if (saveScore) {
+    score = JSON.parse(saveScore);
+}
+
 
 
 for (const el of openEls) {
@@ -79,6 +84,9 @@ function displayCocktail(data) {
         default:
             score += 1;
     }
+    const jsonScore = JSON.stringify(score);
+    window.localStorage.setItem("score", jsonScore);
+
 
     const cocktailInstruction = "<b>Instructions:</b> " + cocktail.strInstructions;
     const instructions = document.createElement("p");

@@ -1,4 +1,5 @@
 const openEls = document.querySelectorAll("[data-open]");
+var cocktailDrink
 var score = 0;
 
 
@@ -34,6 +35,7 @@ function displayCocktail(data) {
     cocktailDiv.innerHTML = '';
 
     const cocktailName = cocktail.strDrink;
+    window.cocktailDrink = cocktailName;
     const heading = document.createElement("h1");
     heading.innerHTML = cocktailName;
     cocktailDiv.appendChild(heading);
@@ -107,6 +109,30 @@ function displayCocktail(data) {
     const scoreDiv = document.createElement("score");
     scoreDiv.innerHTML = cocktailScore;
     cocktailDiv.appendChild(scoreDiv);
+
+    
+    getBreweries();
 }
 
+var getBreweries = function(data) {
+    urlAPI = "https://api.openbrewerydb.org/breweries?by_name=" +cocktailDrink;
 
+    fetch(urlAPI)
+      .then(function(response) {
+        // request was successful
+        if (response.ok) {
+         console.log(response);
+           return response.json();
+        } else {
+          alert("Error: " + response.statusText);
+        }
+      }).then((data) => {
+        console.log(cocktailDrink)
+        displayBreweries()
+
+      })}
+
+var displayBreweries = function(data) {
+
+    
+}

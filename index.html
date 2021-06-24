@@ -26,93 +26,90 @@
             </div>
         </div>
         <div class="columns is-centered" style="margin-top: 10px;">
-            <div class="btn-group">
-                <button type="button" class="open-modal button is-large is-danger"
-                    style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Play Game!</button>
-                <div class="modal" id="modal1">
-                    <div class="modal-dialog modal-background">
-                        <header class="modal-card-head is-link">
-                            Tell Us Your Location and the Food You're Craving
-                            <button class="close-modal" aria-label="close modal" data-close>✕</button>
-                        </header>
-                        <section class="modal-content">
+            <div class="column">
+                <div class="btn-group">
+                    <button type="button" class="open-modal button is-large is-danger"
+                        style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Play Game!</button>
+                </div>
+            </div>
+        </div>
 
-                            <button class="button is-danger is-hovered is-large" id="goSearch">GO!</button>
+    </div>
+    </div>
+
+
+    <section class="hero is-success is-small" style="border: white">
+        <div id="cocktail" class="hero-body has-text-centered">
+
+        </div>
+        <div id="overlay"></div>
+        <div class="columns is-pulled-right" style="margin-left: auto;">
+            <div class="column">
+                <a href="highscores.html"><button class="button is-danger is-hover">SAVE
+                        SCORE</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-info">
+        <div class="hero-body is-success">
+
+            <p class="title" style="text-align: center">
+                Tired of Making Your Own Drinks? Search for a place to have drinks:
+
+            </p>
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-one-quarter">
+                        <div class="brewery">
+                            <label for="breweryInput">Enter your Location</label>
+                            <input id="breweryInput" name="breweryInput" class="input is-warning is-medium" />
+                            <button type=" submit" class="brewerySubmit button is-warning">Submit</button>
+                        </div>
+                        <div class="brewerydisplay"></div>
                     </div>
                 </div>
-                </section>
-
             </div>
+
+            <p class="score" style="text-align: center;"></p>
         </div>
-        </footer>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer" style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)">
+        <div class="content has-text-centered">
+            <div class="columns is-centered">
+                <div class="box">
+                    <h2><strong>Made by Group 8:</strong></h2>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek
+                            Phelps</button></a>
+                </div>
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/IvanPerezRWS" target="_blank"><button
+                            class="button is-link is-medium">Ivan
+                            Perez</button></a>
+                </div>
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/darkholyphoenix" target="_blank"><button
+                            class="button is-warning is-medium">James Bowen</button></a>
+                </div>
+                <div class="column is-one-quarter">
+                    <a href="https://github.com/janekv20" target="_blank"><button
+                            class="button is-danger is-medium">Jane
+                            Vo</button></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
     </div>
-    </div>
-
-</html>
-
-<section class="hero is-info is-small" style="border: white">
-    <div id="cocktail" class="hero-body has-text-centered">
-
-    </div>
-    <div id="overlay"></div>
-</section>
-<section class="hero is-info">
-    <div class="hero-body">
-        
-        <p class="title" style="text-align: center">
-            Tired of Making Your Own Drinks? Search for a place to have drinks:
-
-        </p>
-        <div class= "brewery">
-            <label for="breweryInput">Enter your Location</label>
-            <input id="breweryInput" name="breweryInput"/>
-            <button type="submit" class="brewerySubmit">Submit</button>
-        </div>
-        <div class="brewerydisplay">
-            
-        </div>
-
-        <p class="score" style="text-align: center;"></p>
-        <a href="highscores.html"><button class="button is-success is-hover is-pulled-right">SAVE SCORE</button></a>
-    </div>
-</section>
-
-<!-- footer -->
-<footer class="footer"
-    style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)">
-    <div class="content has-text-centered">
-        <div class="columns is-centered">
-            <div class="box">
-                <h2><strong>Made by Group 8:</strong></h2>
-                <h2>all creators listed, names are links to github pages</h2>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column is-one-quarter">
-                <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek
-                        Phelps</button></a>
-            </div>
-            <div class="column is-one-quarter">
-                <a href="https://github.com/IvanPerezRWS" target="_blank"><button class="button is-link is-medium">Ivan
-                        Perez</button></a>
-            </div>
-            <div class="column is-one-quarter">
-                <a href="https://github.com/darkholyphoenix" target="_blank"><button
-                        class="button is-warning is-medium">James Bowen</button></a>
-            </div>
-            <div class="column is-one-quarter">
-                <a href="https://github.com/janekv20" target="_blank"><button class="button is-danger is-medium">Jane
-                        Vo</button></a>
-            </div>
-        </div>
-
-    </div>
-</footer>
-
-</div>
-<script src="./assets/js/result.js"></script>
-<!--  <script src="./assets/js/highscores.js"></script> -->
+    <script src="./assets/js/result.js"></script>
+    <!--  <script src="./assets/js/highscores.js"></script> -->
 
 </body>
 

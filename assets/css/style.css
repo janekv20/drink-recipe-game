@@ -107,3 +107,47 @@ button {
   transform: none;
   transition-delay: 0.2s;
 }
+
+
+/* HIGHSCORE CARD STYLING
+------------------------------------------------ */
+
+.highscore-card {
+  padding: 20px 35px;
+  background-color: #18cfa8;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
+  border-radius: 20px;
+  margin: 20px 20;
+}
+.card-header-title {
+color: white;
+
+}
+
+.background-image {
+  padding-top: auto;
+  padding-left: auto;
+  padding-right: auto;
+  padding-bottom: 25px;
+  margin: 0px;
+  margin-bottom: 100px;
+}
+
+.bottom-buttons {
+  padding: 100px;
+}
+footer {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: 100px;
+}

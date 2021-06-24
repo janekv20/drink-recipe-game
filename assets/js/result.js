@@ -137,24 +137,24 @@ function displayBreweries(data) {
 
     // var data = [{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }, { value: 4 }];
 
-    for (var i = 0; i < data.length; ++i) {
-        console.log(data[i]);
+    for (var i = 0; i < data.length && i < 5; ++i) {
+
+        const brewery = data[i];
+        const breweryDiv = document.getElementById("breweryDisplay");
+
+        const breweryName = brewery.name;
+        const breweryheading = document.createElement("h1");
+        breweryheading.innerHTML = breweryName;
+        breweryDiv.appendChild(breweryheading);
+
+        var breweryAddress = brewery.street;
+        if (!breweryAddress) {
+            breweryAddress = "No address provided";
+        }
+        const locationList = document.createElement("li");
+        locationList.innerHTML = breweryAddress;
+        breweryDiv.appendChild(locationList);
     }
-
-    const brewery = data[0];
-    const breweryDiv = document.getElementById("breweryDisplay");
-
-    const breweryName = brewery.name;
-    const breweryheading = document.createElement("h1");
-    breweryheading.innerHTML = breweryName;
-    breweryDiv.appendChild(breweryheading);
-
-    const breweryAddress = brewery.street;
-    window.brewerySpot = breweryAddress;
-    const locationHeading = document.createElement("breweryStreet");
-    locationHeading.innerHTML = breweryAddress;
-    breweryDiv.appendChild(locationHeading);
-
 }
 
 locationButton.addEventListener('click', function (event) {

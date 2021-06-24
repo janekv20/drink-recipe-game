@@ -1,6 +1,6 @@
 const openEls = document.querySelectorAll("[data-open]");
 var cocktailDrink
-var score = 0;
+var cocktailScore = 0;
 
 
 for (const el of openEls) {
@@ -34,7 +34,7 @@ function displayCocktail(data) {
     const cocktailDiv = document.getElementById("cocktail");
     cocktailDiv.innerHTML = '';
 
-    const cocktailName = cocktail.strDrink;
+    const cocktailName = "<h1><b>Cocktail Name:" + cocktail.strDrink;
     window.cocktailDrink = cocktailName;
     const heading = document.createElement("h1");
     heading.innerHTML = cocktailName;
@@ -54,28 +54,28 @@ function displayCocktail(data) {
 
     switch (cocktail.strCategory) {
         case "Punch / Party Drink":
-            score += 5;
+            cocktailScore += 5;
             break;
         case "Soft Drink / Soda":
-            score += 1;
+            cocktailScore += 1;
             break;
         case "Cocktail":
-            score += 8;
+            cocktailScore += 8;
             break;
         case "Shot":
-            score += 10
+            cocktailScore += 10
             break;
         case "Ordinary Drink":
-            score += 2;
+            cocktailScore += 2;
             break;
         case "Coffee / Tea":
-            score += 2;
+            cocktailScore += 2;
             break;
         case "Beer":
-            score += 3;
+            cocktailScore += 3;
             break;
         default:
-            score += 1;
+            cocktailScore += 1;
     }
 
     const cocktailInstruction = "<b>Instructions:</b> " + cocktail.strInstructions;
@@ -105,34 +105,53 @@ function displayCocktail(data) {
         cocktailIngredients.appendChild(listItem);
     }
 
-    const cocktailScore = "<h2>Your total score is:</h2>" + score;
-    const scoreDiv = document.createElement("score");
+    const finalScore = "<h2><b>Your total score is: " + cocktailScore;
+    const scoreDiv = document.createElement("finalScore");
     scoreDiv.innerHTML = cocktailScore;
     cocktailDiv.appendChild(scoreDiv);
-
-    
-    getBreweries();
 }
 
-var getBreweries = function(data) {
-    urlAPI = "https://api.openbrewerydb.org/breweries?by_name=" +cocktailDrink;
+var postal = "";
+var getBreweries = function (data) {
+    urlAPI = "https://api.openbrewerydb.org/breweries?by_postal=" + postal;
 
     fetch(urlAPI)
-      .then(function(response) {
-        // request was successful
-        if (response.ok) {
-         console.log(response);
-           return response.json();
-        } else {
-          alert("Error: " + response.statusText);
-        }
-      }).then((data) => {
-        console.log(cocktailDrink)
-        displayBreweries()
+        .then(function (response) {
+            // request was successful
+            if (response.ok) {
+                console.log(response);
+                return response.json();
+            } else {
+                alert("Error: " + response.statusText);
+            }
+        }).then((data) => {
+            console.log(cocktailDrink)
+            displayBreweries()
 
-      })}
-
-var displayBreweries = function(data) {
-
-    
+        })
 }
+
+var displayBreweries = function (data) {
+    const brewery = obdb.name;
+    const breweryDiv = document.querySelector(".breweryDisplayed");
+    breweryDiv.innerHTML = '';
+
+}
+
+localStorage.setItem('cocktailScore', []);
+var retrievedScore = localStorage.getItem('cocktailScore');
+
+// function displayScore() {
+//     const highScores =
+//         window.localStorage.getItem("highScores");
+//     if (!highScores) {
+//         highScores = [];
+//     }
+//     if (highScores.length >= 5) {
+//         highScores.sort((a, b) => b.score - a.score);
+//     } else {
+//         highScores.push(score);
+//     }
+
+//     window.localStorage.setItem("highScores", JSON.stringify(highScores));
+// }

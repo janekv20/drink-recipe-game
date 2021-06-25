@@ -115,10 +115,10 @@ function displayCocktail(data) {
         cocktailIngredients.appendChild(listItem);
     }
 
-    const cocktailScore = "<h2>Your total score is:</h2>" + score;
+    const cocktailScore = "<h2><strong>Your total score is:</strong></h2>" + score;
     const scoreDiv = document.createElement("score");
     scoreDiv.innerHTML = cocktailScore;
-    cocktailDiv.appendChild(scoreDiv);
+    cocktailDiv.appendChild(scoreDiv).style.fontSize = '30px';
 }
 
 var getBreweries = function (breweryInputEL) {

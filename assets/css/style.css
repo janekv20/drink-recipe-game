@@ -1,10 +1,3 @@
-/* :root {
-  --lightgray: #efefef;
-  --blue: steelblue;
-  --white: #fff;
-  --black: rgba(0, 0, 0, 0.8);
-  --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
-} */
 
 * {
   padding: 0;
@@ -12,77 +5,8 @@
   font-family: 'EB Garamond', serif;
 }
 
-/* a {
-  color: inherit;
-  text-decoration: none;
-} */
-
-/* button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: inherit;
-} */
-
-/* .btn-group {
-  text-align: center;
-} */
-
-/* SLIDE LEFT ANIMATION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-[data-animation="slideInOutLeft"] .modal-dialog {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.5s var(--bounceEasing);
-}
-
-[data-animation="slideInOutLeft"].is-visible .modal-dialog {
-  opacity: 1;
-  transform: none;
-  transition-delay: 0.2s;
-} */
-
-
-/* HIGHSCORE CARD STYLING
------------------------------------------------- */
-
-.highscore-card {
-  padding: 20px 35px;
-  background-color: #18cfa8;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-position: 80%;
-  border-radius: 20px;
-  margin: 20px 20;
-}
-.card-header-title {
-color: white;
-
-}
-
 .bottom-buttons {
   padding: 100px;
-}
-/* footer {
-  height: 70px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  margin-top: 100px;
-} */
-
-.highscore-container {
-  background-color: rgba(255, 255, 255, 0.418);
-}
-.scoresHTML {
-  color: white;
 }
 
 .box-centered {

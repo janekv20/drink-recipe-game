@@ -4,6 +4,7 @@
 This application enables users to play a game to randomly receive drink recipes and collect total scores for each drink category they receive. If users want to search for breweries in their city, they can type their city name and receive 5 results of local places and their address.
 
 ##Website
+https://janekv20.github.io/drink-recipe-game/
 
 ##Acceptance Criteria
 

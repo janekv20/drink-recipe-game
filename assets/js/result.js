@@ -8,7 +8,7 @@ if (saveScore) {
     score = JSON.parse(saveScore);
 }
 
-
+// document.getElementById("hero").style.visibility='hidden';
 
 for (const el of openEls) {
     el.addEventListener("click", function () {
@@ -38,7 +38,7 @@ for (const el of openEls) {
 
 function displayCocktail(data) {
     const cocktail = data.drinks[0];
-    const cocktailDiv = document.getElementById("cocktail");
+    const cocktailDiv = document.getElementById("cocktail")
     cocktailDiv.innerHTML = '';
 
     const cocktailName = cocktail.strDrink;

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Randomly Fun Drink Recipe Game</title>
 </head>
@@ -43,11 +46,11 @@
                 </header>
             </div>
         </div>
-        <div class="columns is-centered" style="margin-top: 10px;">
+        <div class="columns" style="margin-top: 10px;">
             <div class="column">
                 <div class="btn-group">
                     <button type="button" class="open-modal button is-large is-danger"
-                        style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Play Game!</button>
+                        style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Pour me a drink!</button>
                 </div>
             </div>
         </div>
@@ -71,16 +74,22 @@
                         <div class="brewery">
                             <label for="breweryInput">Enter your City</label>
                             <input id="breweryInput" name="breweryInput" class="input is-warning is-medium" />
-                            <button type=" submit" class="brewerySubmit button is-warning">Submit</button>
+                            <button type=" submit"
+                                class="brewerySubmit button is-warning is-pulled-right">Submit</button>
                         </div>
                         <div id="breweryDisplay"></div>
                     </div>
                 </div>
-                <a href="userfeedback.html"><button class="button is-success is-hover is-pulled-right">Click Here to
-                        Provide User Feedback</button></a>
             </div>
         </div>
     </section>
+
+    <div class="box">
+        <div>
+            <a href="userfeedback.html"><button class="button is-success is-hover is-pulled-right">Click Here to
+                    Provide User Feedback</button></a>
+        </div>
+    </div>
 
     <!-- footer -->
     <footer class="footer"

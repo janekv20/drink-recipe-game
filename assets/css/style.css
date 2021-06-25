@@ -1,98 +1,33 @@
-:root {
+/* :root {
   --lightgray: #efefef;
   --blue: steelblue;
   --white: #fff;
   --black: rgba(0, 0, 0, 0.8);
   --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
-}
+} */
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'EB Garamond', serif;
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
-button {
+/* button {
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
   font-size: inherit;
-}
+} */
 
-.btn-group {
+/* .btn-group {
   text-align: center;
-}
-
-/* .open-modal {
-  font-weight: bold;
-  background: var(--blue);
-  color: var(--white);
-  padding: 0.75rem 1.75rem;
-  margin-bottom: 1rem;
-  border-radius: 5px;
 } */
-
-/* MODAL
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: var(--black);
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.35s ease-in;
-}
-
-.modal.is-visible {
-  visibility: visible;
-  opacity: 1;
-}
-
-.modal-dialog {
-  position: relative;
-  max-width: 800px;
-  max-height: 80vh;
-  border-radius: 5px;
-  background: var(--white);
-  overflow: auto;
-  cursor: default;
-}
-
-.modal-dialog > * {
-  padding: 1rem;
-}
-
-/* .modal-header,
-.modal-footer {
-  background: var(--lightgray);
-} */
-
-.modal-card-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.modal-card-head .close-modal {
-  font-size: 1.5rem;
-}
-
-.modal p + p {
-  margin-top: 1rem;
-}
 
 /* SLIDE LEFT ANIMATION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -106,7 +41,7 @@ button {
   opacity: 1;
   transform: none;
   transition-delay: 0.2s;
-}
+} */
 
 
 /* HIGHSCORE CARD STYLING
@@ -130,19 +65,10 @@ color: white;
 
 }
 
-.background-image {
-  padding-top: auto;
-  padding-left: auto;
-  padding-right: auto;
-  padding-bottom: 70px;
-  margin: 0px;
-  margin-bottom: 150px;
-}
-
 .bottom-buttons {
   padding: 100px;
 }
-footer {
+/* footer {
   height: 70px;
   width: 100%;
   display: flex;
@@ -150,7 +76,7 @@ footer {
   align-items: center;
   font-size: 1.5rem;
   margin-top: 100px;
-}
+} */
 
 .highscore-container {
   background-color: rgba(255, 255, 255, 0.418);

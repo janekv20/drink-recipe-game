@@ -51,8 +51,8 @@ function displayCocktail(data) {
         document.createElement("img");
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailDiv.appendChild(cocktailImg);
-    document.body.style.backgroundImage = "url('" +
-        cocktail.strDrinkThumb + "')";
+    // document.body.style.backgroundImage = "url('" +
+    //     cocktail.strDrinkThumb + "')";
 
     const cocktailCategory = "<b>Category:</b> " + cocktail.strCategory;
     const category = document.createElement("h2");

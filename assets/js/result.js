@@ -8,7 +8,7 @@ if (saveScore) {
     score = JSON.parse(saveScore);
 }
 
-
+// document.getElementById("hero").style.visibility='hidden';
 
 for (const el of openEls) {
     el.addEventListener("click", function () {
@@ -38,7 +38,7 @@ for (const el of openEls) {
 
 function displayCocktail(data) {
     const cocktail = data.drinks[0];
-    const cocktailDiv = document.getElementById("cocktail");
+    const cocktailDiv = document.getElementById("cocktail")
     cocktailDiv.innerHTML = '';
 
     const cocktailName = cocktail.strDrink;
@@ -51,8 +51,8 @@ function displayCocktail(data) {
         document.createElement("img");
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailDiv.appendChild(cocktailImg);
-    document.body.style.backgroundImage = "url('" +
-        cocktail.strDrinkThumb + "')";
+    // document.body.style.backgroundImage = "url('" +
+    //     cocktail.strDrinkThumb + "')";
 
     const cocktailCategory = "<b>Category:</b> " + cocktail.strCategory;
     const category = document.createElement("h2");
@@ -115,10 +115,10 @@ function displayCocktail(data) {
         cocktailIngredients.appendChild(listItem);
     }
 
-    const cocktailScore = "<h2>Your total score is:</h2>" + score;
+    const cocktailScore = "<h2><strong>Your total score is:</strong></h2>" + score;
     const scoreDiv = document.createElement("score");
     scoreDiv.innerHTML = cocktailScore;
-    cocktailDiv.appendChild(scoreDiv);
+    cocktailDiv.appendChild(scoreDiv).style.fontSize = '30px';
 }
 
 var getBreweries = function (breweryInputEL) {

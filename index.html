@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Randomly Fun Drink Recipe Game</title>
 </head>
 
 <body>
+
     <!-- <div class="modal is-active">
         <div class="modal-background"></div>
             <div class="modal-content">
@@ -28,7 +32,7 @@
         </div>
         <button class="modal-close is-large" aria-label="close"></button>
     </div> -->
-    <div style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)">
+    <div style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497-high-crop.jpg)">
         <div class="container.is-widescreen has-text-centered">
             <div class="notification is-primary">
                 <header>
@@ -42,99 +46,107 @@
                 </header>
             </div>
         </div>
-        <div class="columns is-centered" style="margin-top: 10px;">
+        <div class="columns">
+            <div class="column"></div>
             <div class="column">
                 <div class="btn-group">
                     <button type="button" class="open-modal button is-large is-danger"
-                        style="margin-top: 4rem; margin-bottom: 4.5rem;" data-open="modal1">Play Game!</button>
+                        style="margin-top: 4.5rem; margin-bottom: 4.5rem;" data-open="modal1">Pour me a drink!</button>
                 </div>
             </div>
+            <div class="column"></div>
         </div>
-
-    </div>
     </div>
 
-
+    <!-- hero section -->
     <section class="hero is-success is-small" style="border: white">
         <div id="cocktail" class="hero-body has-text-centered">
 
         </div>
-
     </section>
     <section class="hero is-info">
         <div class="hero-body">
 
             <p class="title" style="text-align: center">
                 Tired of Making Your Own Drinks? Search for a Brewery In Your City:
-
             </p>
-            <!-- <div class="brewery">
-                <label for="breweryInput">Enter your City: </label>
-                <input id="breweryInput" name="breweryInput" />
-                <button type="submit" class="brewerySubmit">Submit</button>
-            </div>
-            <div id="breweryDisplay">
-
-            </div> -->
             <div class="container">
                 <div class="columns is-centered">
-                    <div class="column is-one-quarter">
+                    <div class="column is-one-third">
                         <div class="brewery">
                             <label for="breweryInput">Enter your City</label>
                             <input id="breweryInput" name="breweryInput" class="input is-warning is-medium" />
-                            <button type=" submit" class="brewerySubmit button is-warning">Submit</button>
+                            <button type=" submit"
+                                class="brewerySubmit button is-warning is-pulled-right">Submit</button>
                         </div>
                         <div id="breweryDisplay"></div>
                     </div>
-                    <a href="userfeedback.html"><button class="button is-success is-hover is-pulled-right">Click Here to
-                            Provide
-                            User Feedback</button></a>
                 </div>
             </div>
-
         </div>
     </section>
 
-    </p>
 
-
-    <p class="score" style="text-align: center;"></p>
-    </div>
-    </section>
 
     <!-- footer -->
-    <footer class="footer" style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)">
+    <footer class="footer"
+        style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497-cropped.jpg)">
         <div class="content has-text-centered">
-            <div class="columns is-centered">
-                <div class="box">
-                    <h2><strong>Made by Group 8:</strong></h2>
-                </div>
-            </div>
             <div class="columns">
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/dpbam" target="_blank"><button class="button is-success is-medium">Derek
-                            Phelps</button></a>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h2><strong>Made by Group 8:</strong></h2>
+
+                        <!-- links to designers' GitHub pages -->
+                        <div class="column">
+                            <a href="https://github.com/dpbam" target="_blank"><button
+                                    class="button is-success is-medium">Derek
+                                    Phelps</button></a>
+                        </div>
+                        <div class="column">
+                            <a href="https://github.com/IvanPerezRWS" target="_blank"><button
+                                    class="button is-link is-medium">Ivan
+                                    Perez</button></a>
+                        </div>
+                        <div class="column">
+                            <a href="https://github.com/darkholyphoenix" target="_blank"><button
+                                    class="button is-warning is-medium">James Bowen</button></a>
+                        </div>
+                        <div class="column">
+                            <a href="https://github.com/janekv20" target="_blank"><button
+                                    class="button is-danger is-medium">Jane
+                                    Vo</button></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/IvanPerezRWS" target="_blank"><button
-                            class="button is-link is-medium">Ivan
-                            Perez</button></a>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h2>Made with:</h2>
+                        <div class="column">
+                            <a href="https://bulma.io/"><img alt="Bulma" src="./assets/made-with-bulma.png"></a>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.thecocktaildb.com/"><img alt="CocktailDB"
+                                    src="./assets/the-cocktail-db.png"></a>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.openbrewerydb.org/"><img alt="OpenBrewery"
+                                    src="./assets/open-brewery-db.png"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/darkholyphoenix" target="_blank"><button
-                            class="button is-warning is-medium">James Bowen</button></a>
-                </div>
-                <div class="column is-one-quarter">
-                    <a href="https://github.com/janekv20" target="_blank"><button
-                            class="button is-danger is-medium">Jane
-                            Vo</button></a>
+                <div class="column is-one-third">
+                    <div class="box">
+                        <h2>Let us know what you think:</h2>
+                        <a href="userfeedback.html"><button class="button is-success is-hover">User
+                                Feedback</button></a>
+                    </div>
                 </div>
             </div>
 
         </div>
     </footer>
 
-    </div>
     <script src="./assets/js/result.js"></script>
     <script src="./assets/js/feedback.js"></script>
 

@@ -91,14 +91,14 @@ function displayCocktail(data) {
     const instructions = document.createElement("p");
     instructions.innerHTML = cocktailInstruction;
     cocktailDiv.appendChild(instructions);
+
     //Display Cocktail Ingredients
-    const cocktailIngredients =
-        document.createElement("ul");
+    const cocktailIngredients = document.createElement("ul");
     cocktailDiv.appendChild(cocktailIngredients);
     //Created object and loop to only display ingredients without "null" since ingredients not listed in an array
     const getIngredients = Object.keys(cocktail)
         .filter(function (ingredient) {
-            return ingredient.indexOf("strIngredient") == 0;
+            return ingredient.indexOf("strMeasure") === 0 || ingredient.indexOf("strIngredient") === 0;
         })
         .reduce(function (ingredients, ingredient) {
             if (cocktail[ingredient] != null) {
@@ -108,11 +108,13 @@ function displayCocktail(data) {
         }, {});
 
     for (let key in getIngredients) {
+        console.log(key);
         let value = getIngredients[key];
         listItem = document.createElement("li");
         listItem.innerHTML = value;
         cocktailIngredients.appendChild(listItem);
     }
+
     //Display Cocktail Score
     const cocktailScore = "<h2><strong>Your total score is:</strong></h2>" + score;
     const scoreDiv = document.createElement("score");

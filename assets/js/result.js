@@ -1,15 +1,14 @@
 const openEls = document.querySelectorAll("[data-open]");
-// var breweryInputEL = document.getElementById("breweryInput").value;
 var locationButton = document.querySelector('.brewerySubmit');
 
+//global variable for score, retrieve score from local storage
 var score = 0;
 const saveScore = window.localStorage.getItem("score");
 if (saveScore) {
     score = JSON.parse(saveScore);
 }
 
-// document.getElementById("hero").style.visibility='hidden';
-
+//run cocktail function when "Play Game button is clicked"
 for (const el of openEls) {
     el.addEventListener("click", function () {
 
@@ -36,29 +35,28 @@ for (const el of openEls) {
     )
 }
 
+//Display Cocktail Image, name, category, instructions and ingredient list
 function displayCocktail(data) {
     const cocktail = data.drinks[0];
     const cocktailDiv = document.getElementById("cocktail")
     cocktailDiv.innerHTML = '';
 
-    const cocktailName = cocktail.strDrink;
-    window.cocktailDrink = cocktailName;
-    const heading = document.createElement("h1");
-    heading.innerHTML = cocktailName;
-    cocktailDiv.appendChild(heading);
-
+    //Display Cocktail Image
     const cocktailImg =
         document.createElement("img");
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailDiv.appendChild(cocktailImg);
-    // document.body.style.backgroundImage = "url('" +
-    //     cocktail.strDrinkThumb + "')";
-
+    //Display Cocktail Name
+    const cocktailName = "<b>Cocktail Name:</b> " + cocktail.strDrink;
+    const heading = document.createElement("h1");
+    heading.innerHTML = cocktailName;
+    cocktailDiv.appendChild(heading).style.fontSize = '20px';
+    //Display Cocktail Category
     const cocktailCategory = "<b>Category:</b> " + cocktail.strCategory;
     const category = document.createElement("h2");
     category.innerHTML = cocktailCategory;
     cocktailDiv.appendChild(category);
-
+    //Use Switch Statement to add scores to each Drink Category
     switch (cocktail.strCategory) {
         case "Punch / Party Drink":
             score += 5;
@@ -84,19 +82,20 @@ function displayCocktail(data) {
         default:
             score += 1;
     }
+    //Set localStorage for total score
     const jsonScore = JSON.stringify(score);
     window.localStorage.setItem("score", jsonScore);
 
-
+    //Display Cocktail Instructions
     const cocktailInstruction = "<b>Instructions:</b> " + cocktail.strInstructions;
     const instructions = document.createElement("p");
     instructions.innerHTML = cocktailInstruction;
     cocktailDiv.appendChild(instructions);
-
+    //Display Cocktail Ingredients
     const cocktailIngredients =
         document.createElement("ul");
     cocktailDiv.appendChild(cocktailIngredients);
-
+    //Created object and loop to only display ingredients without "null" since ingredients not listed in an array
     const getIngredients = Object.keys(cocktail)
         .filter(function (ingredient) {
             return ingredient.indexOf("strIngredient") == 0;
@@ -114,7 +113,7 @@ function displayCocktail(data) {
         listItem.innerHTML = value;
         cocktailIngredients.appendChild(listItem);
     }
-
+    //Display Cocktail Score
     const cocktailScore = "<h2><strong>Your total score is:</strong></h2>" + score;
     const scoreDiv = document.createElement("score");
     scoreDiv.innerHTML = cocktailScore;
@@ -141,34 +140,32 @@ var getBreweries = function (breweryInputEL) {
         })
 }
 
+//Display Brewery Names and Address if available
 function displayBreweries(data) {
-
-    // var data = [{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }, { value: 4 }];
-
+    //Since db list all data points in an array, created a for loop to display 5 breweries
     for (var i = 0; i < data.length && i < 5; ++i) {
 
         const brewery = data[i];
         const breweryDiv = document.getElementById("breweryDisplay");
-
+        //Display Brewery Name
         const breweryName = brewery.name;
         const breweryheading = document.createElement("h1");
         breweryheading.innerHTML = breweryName;
         breweryDiv.appendChild(breweryheading);
-
+        //Display Brewery Address
         var breweryAddress = brewery.street;
         if (!breweryAddress) {
             breweryAddress = "No address provided";
         }
+        //List the Breweries
         const locationList = document.createElement("li");
         locationList.innerHTML = breweryAddress;
         breweryDiv.appendChild(locationList);
     }
 }
-
+//On click of Submit button, brewery information will be fetched and displayed.
 locationButton.addEventListener('click', function (event) {
-    console.log("clicked")
     var breweryInputEL = document.getElementById("breweryInput").value;
-    console.log(breweryInputEL)
     window.brewerylocation = breweryInputEL
     getBreweries(breweryInputEL);
 });

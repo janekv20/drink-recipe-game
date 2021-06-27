@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HighScores</title>
+    <title>UserFeedback</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
-<!-- Were using bulma for our css library and formatting -->
-
 </head>
 
-    <body>
-    <!-- Foody backround -->
-    <div style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)" class = background-image>
+<body>
+    <!-- Drinks backround -->
+    <div style="background-image: url(./assets/—Pngtree—set-of-stemware-and-glasses_3562497.jpg)"
+        class=background-image>
         <!--<div class="container is-widescreen has-text-centered"> -->
-            <div class="box">
-                <h1 class="title">Thank you for playing our game! We'd love to hear your feedback!</h1>
-            </div>
-            <!--Form input-->
-            <div class="box box-centered">
-            <div class="field">
-                <label class="label">Name</label>
+        <div class="box">
+            <h1 class="title">Thank you for playing our game! We'd love to hear your feedback!</h1>
+        </div>
+        <!--Form input-->
+        <form action="https://formspree.io/f/moqylevr" method="POST">
+            <div class="box box-centered" id="user-form">
+                <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" id="name" name="name" placeholder="Please provide your name">
+                    </div>
+                </div>
+                <label><b>Your email:</b>
+                    <input type="email" id="email" name="_replyto">
+                </label>
+                <div class="field">
+                    <label class="label">Feedback</label>
+                    <div class="control">
+                        <textarea class="textarea" id="feedback" name="feedback"
+                            placeholder="We'd love to hear your feedback"></textarea>
+                    </div>
+                </div>
                 <div class="control">
-                    <input class="input" type="text" placeholder="Please provide your name">
+                    <button type="submit" class="button is-primary is-pulled-right" id="submit">Submit Feedback</button>
                 </div>
-            </div>
-            <div class="field">
-                <label class="label">Feedback</label>
-                <div class="control">
-                    <textarea class="textarea" placeholder="We'd love to hear your feedback"></textarea>
-                </div>
-            </div>
-            </div>
-
-                <!-- Highscore list and 'play again' & 'clear scores' button -->
-                
-                        <div class="bottom-buttons">
-                            <a href="index.html" role="button" id="playAgain">
-                                <button class="button is-hover is-primary is-large">Play Again</button>
-                            </a>
-                        </div>
-                </div>
-            </div> 
-        <!--</div>-->
+        </form>
     </div>
-    </body>
-    <footer
-        style="background-image: url(./assets/pngtree-color-food-cartoon-doodles-set-png-image_1764564.jpeg)"></footer>
 
-    <!-- End backround theme -->
+    <!-- 'play again' button -->
+    <div class="bottom-buttons">
+        <a href="index.html" role="button" id="playAgain">
+            <button class="button is-hover is-danger is-large">Another Round!</button>
+        </a>
+    </div>
+    </div>
+    <script src="./assets/js/feedback.js"></script>
+</body>
+
+
 </html>
